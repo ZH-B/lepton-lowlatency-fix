@@ -1,0 +1,15 @@
+[Unit]
+Description=Lepton hardware decode bridge (Armada OS / qcom-iris)
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/.local/share/armada-hwdec
+ExecStart=/usr/bin/python3 -u %h/.local/share/armada-hwdec/hwdec_bridge.py
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
