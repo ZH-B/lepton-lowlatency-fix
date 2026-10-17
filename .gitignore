@@ -8,3 +8,7 @@ __pycache__/
 
 # 杂项
 .DS_Store
+
+# 编译产物
+hwdec/component/*.o
+hwdec/component/build/
